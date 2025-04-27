@@ -1092,6 +1092,7 @@ func (t *Terminal) environImpl(forPreview bool) []string {
 	env = append(env, "FZF_KEY="+t.lastKey)
 	env = append(env, "FZF_PROMPT="+string(t.promptString))
 	env = append(env, "FZF_GHOST="+string(t.ghost))
+	env = append(env, "FZF_HEADER="+strings.Join(t.header0,","))
 	env = append(env, "FZF_POINTER="+string(t.pointer))
 	env = append(env, "FZF_PREVIEW_LABEL="+t.previewLabelOpts.label)
 	env = append(env, "FZF_BORDER_LABEL="+t.borderLabelOpts.label)
